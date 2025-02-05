@@ -14,6 +14,14 @@ pnpm dev
 bun dev
 ```
 
+There are Some Dependencies which uses the --force to be installed as they are in experimental phase as of now. :)
+
+
+Used PPR that is Partial PreRendering which is mew in NextJS (used that for updating the number of views on the post integrated with Sanity.IO)
+
+
+Used ISR that is Incremental Static Rendering which uses Cached results if refreshed in very less span of time , so as to make the app fast 
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
