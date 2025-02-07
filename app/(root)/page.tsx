@@ -18,23 +18,13 @@ const page = async ({
 
   const session = await auth();
 
-  console.log(session);
+  console.log(session?.id);
 
   
   const { data: post } = await sanityFetch({ query: STARTUPS_QUERY  , params});
 
   console.log(JSON.stringify(post, null, 2));
 
-  // const post =[{
-  //   _createdAt : new Date() ,
-  //   views : 50,
-  //   author : {_id : 1 , name : "Aayush Nagpal"},
-  //   _id : 1 ,
-  //   description :"This is a descripton",
-  //   image : 'https://plus.unsplash.com/premium_photo-1677094310899-02303289cadf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  //   catagory : "Robots",
-  //   title : "We Robots"
-  // }]
 
   return (
     <>

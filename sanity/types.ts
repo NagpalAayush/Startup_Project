@@ -162,10 +162,7 @@ export type Author = {
   name?: string;
   username?: string;
   email?: string;
-  image?: {
-    url?: string;
-    alt?: string;
-  };
+  image?: string;
   bio?: string;
 };
 
