@@ -29,20 +29,8 @@ export const author = defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
-      type: "object",
-      fields: [
-        defineField({
-          name: "url",
-          title: "Image URL",
-          type: "url",
-        }),
-        defineField({
-          name: "alt",
-          title: "Alternative Text",
-          type: "string",
-        }),
-      ],
+      title: "Image URL",
+      type: "url",
     }),
     defineField({
       name: "bio",
@@ -54,13 +42,13 @@ export const author = defineType({
     select: {
       title: "name",
       subtitle: "email",
-      media: "image.url",
+      media: "image",
     },
     prepare({ title, subtitle, media }) {
       return {
         title,
         subtitle,
-        media: media ? { url: media } : undefined, // Pass the image URL
+        media: media ? { url: media } : undefined,
       };
     },
   },
